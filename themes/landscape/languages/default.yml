@@ -1,10 +1,10 @@
 categories: Categories
-search: Search
+search: 搜索
 tags: Tags
 tagcloud: Tag Cloud
 tweets: Tweets
-prev: Prev
-next: Next
+prev: 上一篇
+next: 下一篇
 comment: Comments
 archive_a: Archives
 archive_b: "Archives: %s"
@@ -12,7 +12,7 @@ page: Page %d
 recent_posts: Recent Posts
 newer: Newer
 older: Older
-share: Share
+share: 分享
 powered_by: Powered by
 rss_feed: RSS Feed
 category: Category

@@ -1,4 +1,19 @@
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+
+/*添加 reset CSS*/
+a{
+	-webkit-tap-highlight-color:transparent;
+}
+a::selection{
+	background:none; color:#333;
+}
+a::-moz-selection{
+	background:none; color:#333;
+}
+a::-webkit-selection{
+	background:none; color:#333;
+}
+
 .fancybox-wrap,
 .fancybox-skin,
 .fancybox-outer,

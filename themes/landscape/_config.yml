@@ -1,11 +1,13 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  主页: /
+  归类: /archives
+  关于: /about
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
+#  查看更多 Read More
+excerpt_link: 阅读全文
 fancybox: true
 
 # Sidebar
@@ -24,12 +26,15 @@ index_widgets:
 # - archive
 
 # widget behavior
+# 依据什么来分类（此处以月份来分类）
 archive_type: 'monthly'
-show_count: false
+# 显示当前分类的博客条数
+show_count: true
 
 # Miscellaneous
+# ico图片
+favicon: http://ohecg7vrp.bkt.clouddn.com/favicon.ico
 google_analytics:
-favicon: /favicon.png
 twitter:
 google_plus:
 fb_admins:
