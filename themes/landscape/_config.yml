@@ -13,12 +13,18 @@ fancybox: true
 # Sidebar
 sidebar: right
 widgets:
+#
 - category
+# 标签
 - tag
+# 标签云
 - tagcloud
 - archive
 - recent_posts
-- opular_posts
+# 浏览量统计
+- popular_posts
+# 友情链接
+- links
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:

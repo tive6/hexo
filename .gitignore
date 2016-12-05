@@ -2,3 +2,5 @@
 .porject
 .idea/
 .node_modules/
+/.deploy_git
+/public

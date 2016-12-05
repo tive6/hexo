@@ -130,7 +130,7 @@ body {
 .outer {
   max-width: 1220px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 .outer:before,
 .outer:after {
