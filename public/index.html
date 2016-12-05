@@ -26,6 +26,10 @@
   <link rel="stylesheet" href="/css/style.css">
   
 
+
+  <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+  <script>AV.initialize("ocYJ0L9z3zU3fyY80irNgFSv-gzGzoHsz", "DBpn2CteN8LQRQHyK0OuWPrY");</script>
+
 </head>
 
 <body>
@@ -101,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zm-1006.github.io/2016/12/01/inputUpdate/" data-id="ciwbtiu5p0001b4te4vi4oj42" class="article-share-link">分享</a>
+      <a data-url="https://zm-1006.github.io/2016/12/01/inputUpdate/" data-id="ciwc2f08a0001zcb9krfm6xtc" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -144,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zm-1006.github.io/2016/11/28/My-first-Post/" data-id="ciwbtiu5k0000b4tetfuhndg0" class="article-share-link">分享</a>
+      <a data-url="https://zm-1006.github.io/2016/11/28/My-first-Post/" data-id="ciwc2f07o0000zcb9quqwzfyi" class="article-share-link">分享</a>
       
       
     </footer>
@@ -185,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zm-1006.github.io/2016/11/24/hello-world/" data-id="ciwbtiu6k0006b4tegfn5vtbu" class="article-share-link">分享</a>
+      <a data-url="https://zm-1006.github.io/2016/11/24/hello-world/" data-id="ciwc2f08n0002zcb9cn8a92ej" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -257,6 +261,8 @@
   </div>
 
   
+    
+  
 </aside>
         
       </div>
@@ -284,11 +290,81 @@
 <script src="http://ohek6kxed.bkt.clouddn.com/jquery-3.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="/js/script.js"></script>
+
+<!--page counter part-->
+<script>
+  function addCount (Counter) {
+    url=$('.article-date').attr('href').trim();
+    title = $('.article-title').text().trim();
+    var query=new AV.Query(Counter);
+    //use url as unique idnetfication
+    query.equalTo("url",url);
+    query.find({
+      success: function(results){
+        if(results.length>0)
+        {
+          var counter=results[0];
+          counter.fetchWhenSave(true); //get recent result
+          counter.increment("time");
+          counter.save();
+        }
+        else
+        {
+          var newcounter=new Counter();
+          newcounter.set("title",title);
+          newcounter.set("url",url);
+          newcounter.set("time",1);
+          newcounter.save(null,{
+            success: function(newcounter){
+              //alert('New object created');
+            },
+            error: function(newcounter,error){
+              alert('Failed to create');
+            }
+          });
+        }
+      },
+      error: function(error){
+        //find null is not a error
+        alert('Error:'+error.code+" "+error.message);
+      }
+    });
+  }
+  $(function(){
+    var Counter=AV.Object.extend("Counter");
+    //only increse visit counting when intering a page
+    if ($('.article-title').length == 1)
+      addCount(Counter);
+    var query=new AV.Query(Counter);
+    query.descending("time");
+    // the sum of popular posts
+    query.limit(10);
+    query.find({
+              success: function(results){
+                for(var i=0;i<results.length;i++)
+                {
+                  var counter=results[i];
+                  title=counter.get("title");
+                  url=counter.get("url");
+                  time=counter.get("time");
+                  // add to the popularlist widget
+                  showcontent=title+" ("+time+")";
+                  //notice the "" in href
+                  $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                }
+              },
+              error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+              }
+            }
+    )
+  });
+</script>
 
   </div>
 </body>

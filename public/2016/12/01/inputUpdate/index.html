@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="zmnaer">
 <meta property="og:description" content="input实现图片上传看似很简单，但只有当自己真正去做时，才发现到处都是坑，一不小心就掉进去了。">
 <meta property="og:image" content="http://ohecg7vrp.bkt.clouddn.com/fileReader.png">
-<meta property="og:updated_time" content="2016-12-02T09:23:34.633Z">
+<meta property="og:updated_time" content="2016-12-05T12:35:18.306Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现input图片上传预览的各种坑">
 <meta name="twitter:description" content="input实现图片上传看似很简单，但只有当自己真正去做时，才发现到处都是坑，一不小心就掉进去了。">
@@ -28,6 +28,10 @@
   
   <link rel="stylesheet" href="/css/style.css">
   
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+  <script>AV.initialize("ocYJ0L9z3zU3fyY80irNgFSv-gzGzoHsz", "DBpn2CteN8LQRQHyK0OuWPrY");</script>
 
 </head>
 
@@ -179,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zm-1006.github.io/2016/12/01/inputUpdate/" data-id="ciwbtiu5p0001b4te4vi4oj42" class="article-share-link">分享</a>
+      <a data-url="https://zm-1006.github.io/2016/12/01/inputUpdate/" data-id="ciwc2f08a0001zcb9krfm6xtc" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -279,6 +283,8 @@
   </div>
 
   
+    
+  
 </aside>
         
       </div>
@@ -306,11 +312,81 @@
 <script src="http://ohek6kxed.bkt.clouddn.com/jquery-3.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="/js/script.js"></script>
+
+<!--page counter part-->
+<script>
+  function addCount (Counter) {
+    url=$('.article-date').attr('href').trim();
+    title = $('.article-title').text().trim();
+    var query=new AV.Query(Counter);
+    //use url as unique idnetfication
+    query.equalTo("url",url);
+    query.find({
+      success: function(results){
+        if(results.length>0)
+        {
+          var counter=results[0];
+          counter.fetchWhenSave(true); //get recent result
+          counter.increment("time");
+          counter.save();
+        }
+        else
+        {
+          var newcounter=new Counter();
+          newcounter.set("title",title);
+          newcounter.set("url",url);
+          newcounter.set("time",1);
+          newcounter.save(null,{
+            success: function(newcounter){
+              //alert('New object created');
+            },
+            error: function(newcounter,error){
+              alert('Failed to create');
+            }
+          });
+        }
+      },
+      error: function(error){
+        //find null is not a error
+        alert('Error:'+error.code+" "+error.message);
+      }
+    });
+  }
+  $(function(){
+    var Counter=AV.Object.extend("Counter");
+    //only increse visit counting when intering a page
+    if ($('.article-title').length == 1)
+      addCount(Counter);
+    var query=new AV.Query(Counter);
+    query.descending("time");
+    // the sum of popular posts
+    query.limit(10);
+    query.find({
+              success: function(results){
+                for(var i=0;i<results.length;i++)
+                {
+                  var counter=results[i];
+                  title=counter.get("title");
+                  url=counter.get("url");
+                  time=counter.get("time");
+                  // add to the popularlist widget
+                  showcontent=title+" ("+time+")";
+                  //notice the "" in href
+                  $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                }
+              },
+              error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+              }
+            }
+    )
+  });
+</script>
 
   </div>
 </body>
