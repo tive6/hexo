@@ -4,11 +4,11 @@
 
 # Site
 title: zmnaer
-subtitle:
+subtitle: 做人如果没梦想，跟咸鱼有什么分别
 description: blog
 author: zmnaer
 language: zh-CN
-timezone: GMT+0800
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
