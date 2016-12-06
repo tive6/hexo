@@ -24,6 +24,8 @@
 <%- js('js/script') %>
 
 <!--page counter part-->
+
+<!--
 <script>
   function addCount (Counter) {
     url=$('.article-date').attr('href').trim();
@@ -58,7 +60,7 @@
       },
       error: function(error){
         //find null is not a error
-        alert('Error:'+error.code+" "+error.message);
+        console.log('Error:'+error.code+" "+error.message);
       }
     });
   }
@@ -86,9 +88,10 @@
                 }
               },
               error: function(error){
-                alert("Error:"+error.code+" "+error.message);
+                console.log("Error:"+error.code+" "+error.message);
               }
             }
     )
   });
 </script>
+-->

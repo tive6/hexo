@@ -113,7 +113,8 @@ document.getElementById('obj');//javascript
 <img src="http://ohecg7vrp.bkt.clouddn.com/06.jpg" width="200">
 ----
 
-<a href="http://zmnaer.com" style="color:red;">zmnaer</a>
+##### 这是一个HTML标签a链接
+    <a href="http://zmnaer.com">zmnaer</a>
 
-----
+<a href="http://zmnaer.com" style="color:red;">zmnaer</a>
 
