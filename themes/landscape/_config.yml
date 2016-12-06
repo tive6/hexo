@@ -46,3 +46,9 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+
+# 是否开启打赏功能
+donate: true
+# 打赏文案
+donate_message: 欣赏此文？求鼓励，求支持！

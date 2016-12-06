@@ -9,6 +9,46 @@ body:after {
 body:after {
   clear: both;
 }
+.donate_bar {
+  text-align: center;
+  margin-top: 5%;
+}
+.donate_bar a.btn_donate {
+  display: inline-block;
+  width: 82px;
+  height: 82px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+  -webkit-transition: background 0s;
+  -moz-transition: background 0s;
+  -o-transition: background 0s;
+  -ms-transition: background 0s;
+  -webkit-transition: background 0s;
+  -moz-transition: background 0s;
+  -ms-transition: background 0s;
+  transition: background 0s;
+}
+.donate_bar a.btn_donate:hover {
+  background-position: 0 -82px;
+}
+.donate_bar .donate_txt {
+  display: block;
+  color: #9d9d9d;
+  font: 14px/2 "Microsoft Yahei";
+}
+.donate_bar.hidden {
+  display: none;
+}
+.post-donate {
+  margin-top: 30px;
+}
+#donate_guide {
+  margin: 0 auto;
+}
+#donate_guide img {
+  height: 100px;
+}
 html,
 body,
 div,
@@ -505,7 +545,7 @@ body {
   color: #777;
 }
 .article {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 .article-inner {
   overflow: hidden;
@@ -750,7 +790,7 @@ a.article-title:hover {
 }
 @media screen and (min-width: 768px) {
   #article-nav {
-    margin: 50px 0;
+    margin: 30px 0;
   }
   #article-nav:before {
     width: 8px;
@@ -774,7 +814,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
   display: block;
 }
@@ -948,13 +988,13 @@ a.article-title:hover {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 3px;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 #comments a {
   color: #258fb8;
 }
 .archives-wrap {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 .archives:before,
 .archives:after {
@@ -1021,7 +1061,7 @@ a.article-title:hover {
   display: block;
 }
 #page-nav {
-  margin: 50px auto;
+  margin: 30px auto;
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
@@ -1296,7 +1336,7 @@ pre .javascript .function {
   }
 }
 .widget-wrap {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 .widget {
   color: #777;

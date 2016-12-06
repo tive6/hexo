@@ -33,6 +33,12 @@
   <% if (!index){ %>
     <%- partial('post/nav') %>
   <% } %>
+
+  <!-- 增加打赏功能 -->
+  <% if (!index && theme.donate){ %>
+  <%- partial('donate') %>
+  <% } %>
+
 </article>
 
 <% if (!index && post.comments && config.duoshuo_shortname){ %>
