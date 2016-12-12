@@ -1,7 +1,7 @@
 ---
-title: markDown基本语法
+title: Markdown基本语法
 date: 2016-11-28 14:20:45
-tags:
+tags: Markdown
 ---
 
 只是大标题
@@ -94,7 +94,9 @@ tags:
 ----------
 
 ##### 这是一个结构列表
-
+    * 编程语言
+        * 脚本语言
+            * Python
 * 编程语言
     * 脚本语言
         * Python
@@ -115,6 +117,20 @@ document.getElementById('obj');//javascript
 
 ##### 这是一个HTML标签a链接
     <a href="http://zmnaer.com">zmnaer</a>
-
+```Bash
+    <a href="http://zmnaer.com" style="color:red;">zmnaer</a>
+```
 <a href="http://zmnaer.com" style="color:red;">zmnaer</a>
+
+## 表格
+|表头1|表头2|表头3|
+|:-----:|:----:|:-----:|
+|con1|con2|con3|
+|con1|con2|con3|
+
+## 表格2
+|表头1|表头2|
+|-----|-------|
+|A|B|
+|C|D|
 

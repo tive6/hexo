@@ -2,7 +2,6 @@
 title: 实现input图片上传预览的各种坑
 date: 2016-12-01 16:25:55
 tags:
-  - js
   - update
 ---
 
