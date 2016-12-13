@@ -7,13 +7,14 @@ title: zmnaer
 subtitle: 做人如果没梦想，跟咸鱼有什么分别
 description: blog
 author: zmnaer
+email: 1099653545@qq.com
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai #时区
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # url: https://zm-1006.github.io
-url: https://zmnaer.com
+url: https://zm-1006.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -61,7 +62,6 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-
 ## 添加多说评论
 duoshuo_shortname: zmnaer
 
@@ -70,6 +70,22 @@ duoshuo_shortname: zmnaer
 ## Themes: https://hexo.io/themes/
 theme: landscape
 
+## RSS配置
+## Plugins: http://hexo.io/plugins/
+
+## sitemap
+Plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+#sitemap
+sitemap:
+  path: sitemap.xml
+#RSS订阅
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

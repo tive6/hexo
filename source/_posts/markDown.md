@@ -1,10 +1,12 @@
 ---
 title: Markdown基本语法
 date: 2016-11-28 14:20:45
-tags: Markdown
+tags:
+  - Markdown
+
 ---
 
-只是大标题
+这是大标题
 =========
 
 <!--more-->

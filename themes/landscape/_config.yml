@@ -3,7 +3,10 @@ menu:
   主页: /
   归类: /archives
   关于: /about
+##  标签: /tag
+##  标签云: /tagcloud
 rss: /atom.xml
+Sitemap: /sitemap.xml
 
 # Content
 #  查看更多 Read More

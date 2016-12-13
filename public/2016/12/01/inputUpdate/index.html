@@ -20,15 +20,13 @@
   <meta name="description" content="input实现图片上传看似很简单，但只有当自己真正去做时，才发现到处都是坑，一不小心就掉进去了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现input图片上传预览的各种坑">
-<meta property="og:url" content="https://zmnaer.com/2016/12/01/inputUpdate/index.html">
+<meta property="og:url" content="https://zm-1006.github.io/2016/12/01/inputUpdate/index.html">
 <meta property="og:site_name" content="zmnaer">
 <meta property="og:description" content="input实现图片上传看似很简单，但只有当自己真正去做时，才发现到处都是坑，一不小心就掉进去了。">
-<meta property="og:image" content="http://ohecg7vrp.bkt.clouddn.com/fileReader.png">
-<meta property="og:updated_time" content="2016-12-12T08:59:53.677Z">
+<meta property="og:updated_time" content="2016-12-13T02:15:42.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现input图片上传预览的各种坑">
 <meta name="twitter:description" content="input实现图片上传看似很简单，但只有当自己真正去做时，才发现到处都是坑，一不小心就掉进去了。">
-<meta name="twitter:image" content="http://ohecg7vrp.bkt.clouddn.com/fileReader.png">
   
     <link rel="alternate" href="/atom.xml" title="zmnaer" type="application/atom+xml">
   
@@ -50,9 +48,9 @@
 </head>
 
 <body>
-  <div id="container">
+<div id="container">
     <div id="wrap">
-      <header id="header">
+        <header id="header">
   <div id="banner"></div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
@@ -83,13 +81,13 @@
         <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zmnaer.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zm-1006.github.io"></form>
       </div>
     </div>
   </div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-inputUpdate" class="article article-type-post" itemscope itemprop="blogPost">
+        <div class="outer">
+            <section id="main"><article id="post-inputUpdate" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/12/01/inputUpdate/" class="article-date">
   <time datetime="2016-12-01T08:25:55.000Z" itemprop="datePublished">2016-12-01</time>
@@ -130,7 +128,7 @@
 <pre><code>现在比较主流、`高版本`的浏览器，像是`IE`，`firfox`，因为出于`安全`的考虑，一般都会在`设置`中禁止获取文件的`路径`，
 而`chrome`浏览器压根就不支持获取，直接把路径值设置为`&quot;&quot;`。
 </code></pre><p>对于input中的<code>file</code>对象，当选取图片（文件）后它有个<code>files</code>子对象，你选取一张图片的时候，它的length为1，而files子对象有几大属性，其中就包括<code>name</code>，<code>size</code>，上传<code>时间戳</code>，<code>上传路径</code>等，当然这个<code>路径</code>值为<code>空</code>。<br>因此，你可以根据这几个属性得到对应的属性值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">name:file.files[<span class="number">0</span>].name;</div><div class="line">size:file.files[<span class="number">0</span>].size;</div></pre></td></tr></table></figure></p>
-<p>一般获取图片路径，无非是想做预览效果。<br>虽然浏览器不让获取X:/xxx/xxx/xxx.png这样的路径，但还是有办法得到它，只不过它经过编码了，你看不懂罢了。<br>这里要提到<code>FileReader</code>对象，简单提一下FileReader的<code>方法</code>和<code>事件</code>:<br><img src="http://ohecg7vrp.bkt.clouddn.com/fileReader.png" alt="FileReader参数/事件" title="FileReader的方法和事件"></p>
+<p>一般获取图片路径，无非是想做预览效果。<br>虽然浏览器不让获取X:/xxx/xxx/xxx.png这样的路径，但还是有办法得到它，只不过它经过编码了，你看不懂罢了。<br>这里要提到<code>FileReader</code>对象，简单提一下FileReader的<code>方法</code>和<code>事件</code>:</p>
 <table>
 <thead>
 <tr>
@@ -186,7 +184,7 @@
 </tbody>
 </table>
 <p>具体方法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</div><div class="line">reader.readAsDataURL(file.files[<span class="number">0</span>]);</div><div class="line"><span class="comment">//调用readAsDataURL方法来读取选中的图像文件</span></div><div class="line">reader.onload = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> src = e.target.result;</div><div class="line">	<span class="built_in">console</span>.log(src);</div><div class="line">	<span class="keyword">var</span> oImg = <span class="keyword">new</span> Image();<span class="comment">//创建一个image对象</span></div><div class="line">	<span class="comment">//也可以innerHTML的形式创建img元素，添加src</span></div><div class="line">	oImg.src = src;<span class="comment">//把上传图片的路径赋值给新的image对象</span></div><div class="line">	div1.appendChild(oImg);<span class="comment">//把img添加到div1中，显示预览</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p>最后终于看到了期待已久的<code>庐山真面目</code>，到这里，基本就实现了上传图片预览功能。<br>完整代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"file"</span> id=<span class="string">"file"</span>&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;script&gt;</div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> file = <span class="built_in">document</span>.getElementById(<span class="string">'file'</span>);</div><div class="line">	<span class="keyword">var</span> div1 = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</div><div class="line">	file.onchange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> fData = file.value;</div><div class="line">		<span class="built_in">console</span>.log(fData);<span class="comment">//安全模式下的“伪路径”</span></div><div class="line">		<span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</div><div class="line">		reader.readAsDataURL(file.files[<span class="number">0</span>]);</div><div class="line">		<span class="comment">//调用readAsDataURL方法来读取选中的图像文件</span></div><div class="line">		reader.onload = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</div><div class="line">			<span class="keyword">var</span> src = e.target.result;</div><div class="line">			<span class="built_in">console</span>.log(src);<span class="comment">//编码过的图片</span></div><div class="line">			<span class="keyword">var</span> oImg = <span class="keyword">new</span> Image();<span class="comment">//创建一个image对象</span></div><div class="line">			<span class="comment">//也可以innerHTML的形式创建img元素，添加src</span></div><div class="line">			oImg.src = src;<span class="comment">//把上传图片的路径赋值给新的image对象</span></div><div class="line">			div1.appendChild(oImg);<span class="comment">//把img添加到div1中，显示预览</span></div><div class="line">		&#125;;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p>最后终于看到了期待已久的<code>庐山真面目</code>，到这里，基本就实现了上传图片预览功能。<br>完整代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"file"</span> id=<span class="string">"file"</span>&gt;</div><div class="line">&lt;div id="div1"&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> file = <span class="built_in">document</span>.getElementById(<span class="string">'file'</span>);</div><div class="line">	<span class="keyword">var</span> div1 = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</div><div class="line">	file.onchange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> fData = file.value;</div><div class="line">		<span class="built_in">console</span>.log(fData);<span class="comment">//安全模式下的“伪路径”</span></div><div class="line">		<span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</div><div class="line">		reader.readAsDataURL(file.files[<span class="number">0</span>]);</div><div class="line">		<span class="comment">//调用readAsDataURL方法来读取选中的图像文件</span></div><div class="line">		reader.onload = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</div><div class="line">			<span class="keyword">var</span> src = e.target.result;</div><div class="line">			<span class="built_in">console</span>.log(src);<span class="comment">//编码过的图片</span></div><div class="line">			<span class="keyword">var</span> oImg = <span class="keyword">new</span> Image();<span class="comment">//创建一个image对象</span></div><div class="line">			<span class="comment">//也可以innerHTML的形式创建img元素，添加src</span></div><div class="line">			oImg.src = src;<span class="comment">//把上传图片的路径赋值给新的image对象</span></div><div class="line">			div1.appendChild(oImg);<span class="comment">//把img添加到div1中，显示预览</span></div><div class="line">		&#125;;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
 <p>如有欠缺，不当，可在评论中提出。</p>
 <blockquote>
 <blockquote>
@@ -197,10 +195,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zmnaer.com/2016/12/01/inputUpdate/" data-id="ciwheaowm0001f4tel9hpkbfn" class="article-share-link">分享</a>
+      <a data-url="https://zm-1006.github.io/2016/12/01/inputUpdate/" data-id="ciwn812po0000c8tefjeu9aip" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
 
     </footer>
   </div>
@@ -210,7 +208,7 @@
   
   
     <a href="/2016/11/28/markDown/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">Markdown基本语法</div>
     </a>
   
@@ -271,7 +269,7 @@
 
 <section id="comments">
   <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/01/inputUpdate/" data-title="实现input图片上传预览的各种坑" data-url="https://zmnaer.com/2016/12/01/inputUpdate/"></div>
+  <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/01/inputUpdate/" data-title="实现input图片上传预览的各种坑" data-url="https://zm-1006.github.io/2016/12/01/inputUpdate/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -288,8 +286,8 @@
   <!-- 多说公共JS代码 end -->
 </section>
 </section>
-        
-          <aside id="sidebar">
+            
+            <aside id="sidebar">
   
     
 
@@ -298,7 +296,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/update/">update</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/update/">update</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -308,7 +306,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/update/" style="font-size: 10px;">update</a>
+      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/update/" style="font-size: 10px;">update</a>
     </div>
   </div>
 
@@ -347,31 +345,33 @@
 
   
     
-<h3 class="widget-title">友情链接</h3>
-<div class="widget tag">
-  <ul class="entry">
-    
-    <li class='link'><a href='https://github.com/zm-1006'>Github</a></li>
-    
-    <li class='link'><a href='http://zmnaer.com'>zmnaer</a></li>
-    
-    <li class='link'><a href='https://coding.net/u/zmnaer'>coding</a></li>
-    
-    <li class='link'><a href='http://zmnaer.com'>QQ</a></li>
-    
-  </ul>
+<div class="widget-wrap">
+  <h3 class="widget-title">友情链接</h3>
+  <div class="widget tag">
+    <ul class="entry">
+      
+      <li class='link'><a href='https://github.com/zm-1006'>Github</a></li>
+      
+      <li class='link'><a href='http://zmnaer.com'>zmnaer</a></li>
+      
+      <li class='link'><a href='https://coding.net/u/zmnaer'>coding</a></li>
+      
+      <li class='link'><a href='http://zmnaer.com'>QQ</a></li>
+      
+    </ul>
+  </div>
 </div>
 
   
 </aside>
-        
-      </div>
-      <footer id="footer">
+            
+        </div>
+        <footer id="footer">
   
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016——zmnaer<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      由 <a href="http://hexo.io/" target="_blank"> Hexo </a> 强力驱动
     </div>
   </div>
 </footer>
@@ -469,6 +469,7 @@
 </script>
 -->
 
-  </div>
+</div>
+<!--<a href="https://github.com/zm-1006"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>-->
 </body>
 </html>
