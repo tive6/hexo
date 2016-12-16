@@ -15,22 +15,18 @@
   <!--设置创建时间-->
   <meta name="date" content="2016年10月" />
   
-  <title>Markdown基本语法 | zmnaer</title>
+  <title>js-sort方法的正确使用 | zmnaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是大标题">
+  <meta name="description" content="JavaScript中的sort()方法用于对数组的元素进行排序。其中有许多误区一定要注意，不然就会带来意想不到的结果。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown基本语法">
-<meta property="og:url" content="https://zm-1006.github.io/2016/11/28/markDown/index.html">
+<meta property="og:title" content="js-sort方法的正确使用">
+<meta property="og:url" content="https://zm-1006.github.io/2016/12/16/js-sort方法的正确使用/index.html">
 <meta property="og:site_name" content="zmnaer">
-<meta property="og:description" content="这是大标题">
-<meta property="og:image" content="http://ohecg7vrp.bkt.clouddn.com/01.jpg">
-<meta property="og:image" content="http://ohecg7vrp.bkt.clouddn.com/14.gif">
-<meta property="og:image" content="http://ohecg7vrp.bkt.clouddn.com/06.jpg">
-<meta property="og:updated_time" content="2016-12-13T02:15:09.869Z">
+<meta property="og:description" content="JavaScript中的sort()方法用于对数组的元素进行排序。其中有许多误区一定要注意，不然就会带来意想不到的结果。">
+<meta property="og:updated_time" content="2016-12-16T07:14:16.747Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown基本语法">
-<meta name="twitter:description" content="这是大标题">
-<meta name="twitter:image" content="http://ohecg7vrp.bkt.clouddn.com/01.jpg">
+<meta name="twitter:title" content="js-sort方法的正确使用">
+<meta name="twitter:description" content="JavaScript中的sort()方法用于对数组的元素进行排序。其中有许多误区一定要注意，不然就会带来意想不到的结果。">
   
     <link rel="alternate" href="/atom.xml" title="zmnaer" type="application/atom+xml">
   
@@ -93,10 +89,10 @@
   </div>
 </header>
         <div class="outer">
-            <section id="main"><article id="post-markDown" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-js-sort方法的正确使用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/11/28/markDown/" class="article-date">
-  <time datetime="2016-11-28T06:20:45.000Z" itemprop="datePublished">2016-11-28</time>
+    <a href="/2016/12/16/js-sort方法的正确使用/" class="article-date">
+  <time datetime="2016-12-16T05:30:26.000Z" itemprop="datePublished">2016-12-16</time>
 </a>
     
   </div>
@@ -107,7 +103,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Markdown基本语法
+      js-sort方法的正确使用
     </h1>
   
 
@@ -115,112 +111,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="这是大标题"><a href="#这是大标题" class="headerlink" title="这是大标题"></a>这是大标题</h1><a id="more"></a>
-<h3 id="这是一个多行文本"><a href="#这是一个多行文本" class="headerlink" title="这是一个多行文本"></a>这是一个多行文本</h3><pre><code>多行文本前加入两个Tab即可
-多行文本前加入两个Tab即可
-多行文本前加入两个Tab即可
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>.config(&#123;</div><div class="line">  <span class="attr">baseUrl</span>: <span class="string">'weixin/js'</span>,</div><div class="line">  <span class="attr">paths</span>: &#123;</div><div class="line">    <span class="string">'jquery'</span>: [</div><div class="line">      <span class="string">'//cdn.bootcss.com/jquery/1.12.4/jquery.min'</span>,</div><div class="line">      <span class="string">'lib/jquery/1.12.4/jquery.min'</span></div><div class="line">    ],</div><div class="line">    <span class="string">'util'</span>: <span class="string">'common/util'</span>,</div><div class="line">    <span class="string">'config'</span>: <span class="string">'settings'</span>,</div><div class="line">    <span class="comment">// 实体类</span></div><div class="line">    <span class="string">'Result'</span>: <span class="string">'model/result'</span>,</div><div class="line">    <span class="string">'User'</span>: <span class="string">'model/user'</span></div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</code></pre><hr>
-<h3 id="这是一个单行文本"><a href="#这是一个单行文本" class="headerlink" title="这是一个单行文本"></a>这是一个单行文本</h3><pre><code>多行文本前加入两个Tab即可
-</code></pre><hr>
-<h3 id="文字被些字符包围-多重包围"><a href="#文字被些字符包围-多重包围" class="headerlink" title="文字被些字符包围,多重包围"></a>文字被些字符包围,多重包围</h3><blockquote>
-<p>文字被些字符包围开始</p>
+        <p>JavaScript中的sort()方法用于对数组的元素进行排序。其中有许多误区一定要注意，不然就会带来意想不到的结果。<br><a id="more"></a><br>下面就举几个具体事例来说明：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 想要的正常结果:</span></div><div class="line">[<span class="string">'Xiaomi'</span>, <span class="string">'Apple'</span>, <span class="string">'Oppo'</span>].sort(); <span class="comment">// ['Apple', 'Oppo', 'Xiaomi'];</span></div><div class="line"></div><div class="line"><span class="comment">// 诡异的结果:</span></div><div class="line">[<span class="string">'Xiaomi'</span>, <span class="string">'apple'</span>, <span class="string">'Oppo'</span>].sort(); <span class="comment">// ['Oppo', 'Xiaomi", 'apple']</span></div><div class="line"></div><div class="line"><span class="comment">// 无法理解的结果:</span></div><div class="line">[<span class="number">10</span>, <span class="number">22</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">2</span>].sort(); <span class="comment">// [1, 10, 2, 22, 8]</span></div></pre></td></tr></table></figure></p>
+<p>造成第二第结果的原因是，因为sort()方法是根据<code>字符串</code>的<code>ASCII码</code>进行排序，所谓的ASCII码也就是我们常说的<code>unicode</code>编码。<br>而<code>同一个</code>英文字母，<code>大写</code>与<code>小写</code>是有区别的，小写字母的ASCII码是排在大写字母的后边，所以得到这种结果也就见怪不怪了。</p>
+<ul>
+<li>解决方法其实也很简单：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'Xiaomi'</span>, <span class="string">'apple'</span>, <span class="string">'Oppo'</span>];</div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span> (<span class="params">s1, s2</span>) </span>&#123;</div><div class="line">    x1 = s1.toUpperCase();</div><div class="line">    x2 = s2.toUpperCase();</div><div class="line">    <span class="keyword">if</span> (x1 &lt; x2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (x1 &gt; x2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;); <span class="comment">// ['apple', 'Oppo', 'Xiaomi']</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这里就是把arr中所有元素的大小写做了<code>统一处理</code>，要么都是大写，要么都是小写，这样就能避免大小写<code>unicode码</code>不同带来的困扰。</p>
+<p>造成第三种结果的原因是，因为sort()方法在处理数组时，其实是对数组中的所有元素做了<code>隐式转换</code>。<br>而<code>Number</code>类型的数字都被转换成了<code>String</code>类型的字符串，在unicode码比较大小时，是<code>从前到后</code>且<code>逐位</code>进行比较（先是比较数组中<code>所有</code>元素的<code>第一位</code>，接着是第二位，第三位…）。<br>自然而然，就得到<code>[1, 10, 2, 22, 8]</code>这样的结果。</p>
+<ul>
+<li>解决办法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">10</span>, <span class="number">22</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">2</span>];</div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> a-b</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">// [ 1, 2, 8, 10, 22 ]</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>当然你也可以<code>倒序</code>排列：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">10</span>, <span class="number">22</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">2</span>];</div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> b-a  <span class="comment">//这个顺序很重要</span></div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">// [ 22, 10, 8, 2, 1 ]</span></div></pre></td></tr></table></figure></p>
+<p>关于参数<code>a</code>和<code>b</code>:</p>
+<pre><code>若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+若 a 等于 b，则返回 0。
+若 a 大于 b，则返回一个大于 0 的值。
+</code></pre><p>W3C也有相关说明，<a href="http://www.w3school.com.cn/jsref/jsref_sort.asp" title="sort方法" target="_blank" rel="external">以供参考</a>。</p>
 <blockquote>
-<p>只要再文字前面加上&gt;空格即可</p>
+<blockquote>
+<p>谢谢~O(∩_∩)O~</p>
 </blockquote>
 </blockquote>
-<hr>
-<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><hr>
-<h5 id="这是一个"><a href="#这是一个" class="headerlink" title="这是一个"></a>这是一个</h5><h5 id="这是一个有title的图片"><a href="#这是一个有title的图片" class="headerlink" title="这是一个有title的图片"></a>这是一个有title的图片</h5><p><img src="http://ohecg7vrp.bkt.clouddn.com/01.jpg" alt="IMG" title="Hello"></p>
-<h5 id="这是一个超链接"><a href="#这是一个超链接" class="headerlink" title="这是一个超链接"></a>这是一个超链接</h5><p><a href="http://zmnaer.com" title="zmnaer个人博客" target="_blank" rel="external">github</a></p>
-<h5 id="这是一个有超链接的图片"><a href="#这是一个有超链接的图片" class="headerlink" title="这是一个有超链接的图片"></a>这是一个有超链接的图片</h5><p><a href="http://zmnaer.com" target="_blank" rel="external"><img src="http://ohecg7vrp.bkt.clouddn.com/14.gif" alt="zz" title="blog"></a></p>
-<hr>
-<p>直接输入的文字就是普通文本。需要注意的是要</p>
-<h2 id="换行的时候不能直接通过回车来换行，需要使用。也就是html里面的标签-。"><a href="#换行的时候不能直接通过回车来换行，需要使用。也就是html里面的标签-。" class="headerlink" title="换行的时候不能直接通过回车来换行，需要使用。也就是html里面的标签 。"></a>换行的时候不能直接通过回车来换行，需要使用。<br>也就是html里面的标签 。</h2><h5 id="这是一个换行符"><a href="#这是一个换行符" class="headerlink" title="这是一个换行符\"></a>这是一个换行符\<br \=""></h5><hr>
-<p>这是含有<code>高亮</code>显示的<code>文字</code>。</p>
-<hr>
-<h5 id="这是一个ul列表"><a href="#这是一个ul列表" class="headerlink" title="这是一个ul列表"></a>这是一个ul列表</h5><ul>
-<li>昵称：果冻虾仁</li>
-<li>别名：隔壁老王</li>
-<li>英文名：Jelly</li>
-</ul>
-<hr>
-<h5 id="这是一个ol列表"><a href="#这是一个ol列表" class="headerlink" title="这是一个ol列表"></a>这是一个ol列表</h5><ol>
-<li>前端</li>
-<li>后台</li>
-<li>测试</li>
-<li>UI</li>
-<li>产品</li>
-<li>Android</li>
-<li>IOS</li>
-<li>运维</li>
-</ol>
-<hr>
-<h5 id="这是一个结构列表"><a href="#这是一个结构列表" class="headerlink" title="这是一个结构列表"></a>这是一个结构列表</h5><pre><code>* 编程语言
-    * 脚本语言
-        * Python
-</code></pre><ul>
-<li>编程语言<ul>
-<li>脚本语言<ul>
-<li>Python</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="这是一个特别显示的块级"><a href="#这是一个特别显示的块级" class="headerlink" title="这是一个特别显示的块级"></a>这是一个特别显示的块级</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p><br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'obj'</span>);<span class="comment">//javascript</span></div></pre></td></tr></table></figure></p>
-<hr>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://ohecg7vrp.bkt.clouddn.com/06.jpg" width="200"></h2><h5 id="这是一个HTML标签a链接"><a href="#这是一个HTML标签a链接" class="headerlink" title="这是一个HTML标签a链接"></a>这是一个HTML标签a链接</h5><pre><code>&lt;a href=&quot;http://zmnaer.com&quot;&gt;zmnaer&lt;/a&gt;
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a href=<span class="string">"http://zmnaer.com"</span> style=<span class="string">"color:red;"</span>&gt;zmnaer&lt;/a&gt;</div></pre></td></tr></table></figure>
-<p><a href="http://zmnaer.com" style="color:red;" target="_blank" rel="external">zmnaer</a></p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">表头1</th>
-<th style="text-align:center">表头2</th>
-<th style="text-align:center">表头3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">con1</td>
-<td style="text-align:center">con2</td>
-<td style="text-align:center">con3</td>
-</tr>
-<tr>
-<td style="text-align:center">con1</td>
-<td style="text-align:center">con2</td>
-<td style="text-align:center">con3</td>
-</tr>
-</tbody>
-</table>
-<h2 id="表格2"><a href="#表格2" class="headerlink" title="表格2"></a>表格2</h2><table>
-<thead>
-<tr>
-<th>表头1</th>
-<th>表头2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>B</td>
-</tr>
-<tr>
-<td>C</td>
-<td>D</td>
-</tr>
-</tbody>
-</table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zm-1006.github.io/2016/11/28/markDown/" data-id="ciwriialq0004ewtema74nvqw" class="article-share-link">分享</a>
+      <a data-url="https://zm-1006.github.io/2016/12/16/js-sort方法的正确使用/" data-id="ciwriialt0005ewte7b6xb4s8" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
     </footer>
   </div>
@@ -228,19 +149,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/12/01/inputUpdate/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          实现input图片上传预览的各种坑
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/11/24/helloWorld/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/12/01/inputUpdate/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">大牛之路—Hello World</div>
+      <div class="article-nav-title">实现input图片上传预览的各种坑</div>
     </a>
   
 </nav>
@@ -300,7 +212,7 @@
 
 <section id="comments">
   <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="2016/11/28/markDown/" data-title="Markdown基本语法" data-url="https://zm-1006.github.io/2016/11/28/markDown/"></div>
+  <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/16/js-sort方法的正确使用/" data-title="js-sort方法的正确使用" data-url="https://zm-1006.github.io/2016/12/16/js-sort方法的正确使用/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">

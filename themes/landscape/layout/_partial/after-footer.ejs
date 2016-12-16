@@ -24,7 +24,7 @@
 <%- js('js/script') %>
 
 <!--page counter part-->
-
+<!--文章浏览量统计-->
 <!--
 <script>
   function addCount (Counter) {
@@ -60,7 +60,7 @@
       },
       error: function(error){
         //find null is not a error
-        console.log('Error:'+error.code+" "+error.message);
+        alert('Error:'+error.code+" "+error.message);
       }
     });
   }
@@ -88,7 +88,7 @@
                 }
               },
               error: function(error){
-                console.log("Error:"+error.code+" "+error.message);
+                alert("Error:"+error.code+" "+error.message);
               }
             }
     )
