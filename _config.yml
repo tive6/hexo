@@ -91,5 +91,8 @@ feed:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:zm-1006/zm-1006.github.io.git
-  branch: master
+  #repository: git@github.com:zm-1006/zm-1006.github.io.git
+  repo:
+      github: git@github.com:zm-1006/zm-1006.github.io.git,master
+      coding: git@git.coding.net:zmnaer/zmnaer.git,coding-pages
+  #branch: master
