@@ -82,83 +82,72 @@ tags:
 ### 一个超链接（a标签）
 **md写法：**
 
-        [github](http://zmnaer.com "zmnaer个人博客")
+        [个人博客](http://zmnaer.com "zmnaer个人博客")
 **结果显示：**
-[github](http://zmnaer.com "zmnaer个人博客")
+[个人博客](http://zmnaer.com "zmnaer个人博客")
 
 ---
 
 ### 一个有超链接的图片
 **md写法：**
 
-        [![zz]](http://zmnaer.com)
-        [zz]:http://ohecg7vrp.bkt.clouddn.com/14.gif "blog"
+        [![zmnaer]](http://zmnaer.com)
+        [zmnaer]:http://ohecg7vrp.bkt.clouddn.com/14.gif "blog"
 **结果显示：**
-[![zz]](http://zmnaer.com)
-[zz]:http://ohecg7vrp.bkt.clouddn.com/14.gif "blog"
+[![zmnaer]](http://zmnaer.com)
+[zmnaer]:http://ohecg7vrp.bkt.clouddn.com/14.gif "blog"
 
 ---
 ### 换行符（br）
 **md写法：**
-        <br/>标签
----
 
+        第一行文字
+        <br/>
+        第二行文字
+**结果显示：**
+第一行文字
+<br/>
+第二行文字
+
+---
 ### 高亮文字
 **md写法：**
 
-        `高亮文字`
+        `高亮`显示的`文字`
 **结果显示：**
 `高亮`显示的`文字`
 
 ---
-
-
-
-##### 这是一个特别显示的块级
-
-``` bash
-$ hexo new "My New Post"
-```
-<br>
-``` javascript
+### 特别显示的文本块
+**md写法：**
+* 三个`·`+`bash`(或者java、javascript、php、html...) +换行+`代码块...`+换行+三个`·`
+**结果显示：**
+```javascript
 document.getElementById('obj');//javascript
 ```
+* 提示：此处的`·`是`英文输入法`下`Tab键`上边的那个字符，`+`号请忽略不要写。
 ----
-<img src="http://ohecg7vrp.bkt.clouddn.com/06.jpg" width="200">
-----
-
-##### 这是一个HTML标签a链接
-    <a href="http://zmnaer.com">zmnaer</a>
-```Bash
-    <a href="http://zmnaer.com" style="color:red;">zmnaer</a>
-```
-<a href="http://zmnaer.com" style="color:red;">zmnaer</a>
 
 ## 表格
+**md写法：**
+
+        |表头1|表头2|表头3|
+        |:---:|:---:|:---:|
+        |con11|con22|con33|
+        |con11|con22|con33|
+**结果显示：**
+
 |表头1|表头2|表头3|
-|:-----:|:----:|:-----:|
-|con1|con2|con3|
-|con1|con2|con3|
+|:---:|:---:|:---:|
+|con11|con22|con33|
+|con11|con22|con33|
+* 提示：此处的`:`相当于CSS中的`text-align`属性；`:`在左边就是文本`左对齐`；`:`在右边就是文本`右对齐`；如果两边都有，则本文`居中`显示(相当于text-align:center)。
 
-## 表格2
-|表头1|表头2|
-|-----|-------|
-|A|B|
-|C|D|
+---
+***提示：***
+* 文中所有的`·`是`英文输入法`下`Tab键`上边的那个字符，`+`号请忽略不要写。（补充：高亮显示和特别显示中的`·`）;
+* Markdown支持大部分`HTML标签`，可以直接写HTML标签，并能加`内联样式`。
+* Markdown在各个地方解析的情况不同，因此结果显示会有所区别，有的平台不能解析表格。
+* 此文仅供参考，如有不详之处，望见谅。
 
-``` javascript
-        require.config({
-          baseUrl: 'weixin/js',
-          paths: {
-            'jquery': [
-              '//cdn.bootcss.com/jquery/1.12.4/jquery.min',
-              'lib/jquery/1.12.4/jquery.min'
-            ],
-            'util': 'common/util',
-            'config': 'settings',
-            // 实体类
-            'Result': 'model/result',
-            'User': 'model/user'
-          }
-        });
-        ```
+
