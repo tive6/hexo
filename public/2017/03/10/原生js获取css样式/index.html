@@ -15,18 +15,18 @@
   <!--设置创建时间-->
   <meta name="date" content="2016年10月" />
   
-  <title>zmnaer</title>
+  <title>原生js获取css样式 | zmnaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="404">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zmnaer">
-<meta property="og:url" content="https://zm-1006.github.io/404.html">
+  <meta name="description" content="在前端开发过程中往往需要动态的编辑修改一个UI的样式，这必然涉及到CSS的获取与设置。下面就探讨探讨原生js获取css样式的方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生js获取css样式">
+<meta property="og:url" content="https://zm-1006.github.io/2017/03/10/原生js获取css样式/index.html">
 <meta property="og:site_name" content="zmnaer">
-<meta property="og:description" content="404">
-<meta property="og:updated_time" content="2017-02-21T06:52:26.244Z">
+<meta property="og:description" content="在前端开发过程中往往需要动态的编辑修改一个UI的样式，这必然涉及到CSS的获取与设置。下面就探讨探讨原生js获取css样式的方法。">
+<meta property="og:updated_time" content="2017-03-10T09:32:15.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zmnaer">
-<meta name="twitter:description" content="404">
+<meta name="twitter:title" content="原生js获取css样式">
+<meta name="twitter:description" content="在前端开发过程中往往需要动态的编辑修改一个UI的样式，这必然涉及到CSS的获取与设置。下面就探讨探讨原生js获取css样式的方法。">
   
     <link rel="alternate" href="/atom.xml" title="zmnaer" type="application/atom+xml">
   
@@ -89,38 +89,79 @@
   </div>
 </header>
         <div class="outer">
-            <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-原生js获取css样式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/404.html" class="article-date">
-  <time datetime="2017-02-24T08:06:08.388Z" itemprop="datePublished">2017-02-24</time>
+    <a href="/2017/03/10/原生js获取css样式/" class="article-date">
+  <time datetime="2017-03-10T08:10:33.000Z" itemprop="datePublished">2017-03-10</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      原生js获取css样式
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>404</title>
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="http://zmnaer.com" homepagename="我的博客" style="color:#23AED3;"></script>
-</body>
-</html>
+        <p>在前端开发过程中往往需要动态的编辑修改一个UI的样式，这必然涉及到CSS的获取与设置。下面就探讨探讨原生js获取css样式的方法。<br><a id="more"></a></p>
+<ul>
+<li>事例<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>test<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">        #div1&#123;</div><div class="line">            width: 200px;</div><div class="line">            background:#00f;</div><div class="line">            border: 1px solid #000;</div><div class="line">        &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span> <span class="attr">style</span>=<span class="string">"height:100px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    window.onload = function() &#123;</div><div class="line">        var oDiv = document.getElementById('div1');</div><div class="line">        // div的width</div><div class="line">        console.log(oDiv.style.width);</div><div class="line">        // div的height</div><div class="line">        console.log(oDiv.style.height);</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>经过浏览器运行之后，在<code>console控制台</code>很明显有输出。</p>
+<ul>
+<li>第一行是空白；</li>
+<li>第二行会输出<code>100px</code>。</li>
+</ul>
+<p>很多人不明白是怎么回事，想要获取的<code>width</code>怎么是空白。<br>原来是因为直接用<code>oDiv.style</code>方法只能获取元素的<code>内联样式</code>，对于<code>内部样式</code>和<code>外联样式</code>，这种方法则不要取得。<br>因此要另寻出路，众所周知，IE浏览器总是别具一格，格外奇葩，所以这里还得解决兼容性问题：</p>
+<ul>
+<li><p>IE浏览器：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oDiv = <span class="built_in">document</span>.getElementById(<span class="string">'div'</span>);</div><div class="line"><span class="keyword">var</span> styles = oDiv.currentStyle;</div><div class="line">styles.width;</div></pre></td></tr></table></figure>
+</li>
+<li><p>其他浏览器：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oDiv = <span class="built_in">document</span>.getElementById(<span class="string">'div'</span>);</div><div class="line"><span class="keyword">var</span> style = <span class="built_in">window</span>.getComputedStyle(oDiv, <span class="literal">null</span>);</div><div class="line">styles.width;</div></pre></td></tr></table></figure>
+</li>
+<li><p>封装方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj,attr</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ol>
+<li>此处有两个参数，obj是将要获取样式的元素，attr则是样式的属性，如</li>
+<li>此方法只能获取<code>单一属性</code>样式，像<code>border</code>等具有综合属性的样式，只有<code>chrome</code>浏览器能获取；而其他浏览器只能通过<code>borderStyleColor</code>这种<code>驼峰命名</code>的<code>单一属性</code>来取得。</li>
+</ol>
+<p>参考博文：<a href="http://blog.csdn.net/u011043843/article/details/39811211" target="_blank" rel="external">http://blog.csdn.net/u011043843/article/details/39811211</a></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zm-1006.github.io/404.html" data-id="cj03jphb90000qcl3571b4k2g" class="article-share-link">分享</a>
+      <a data-url="https://zm-1006.github.io/2017/03/10/原生js获取css样式/" data-id="cj03kbuzy0000okl3258ic26n" class="article-share-link">分享</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/24/mongoose常见错误（一）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">mongoose常见错误（一）</div>
+    </a>
+  
+</nav>
+
   
 
 
@@ -176,7 +217,7 @@
 
 <section id="comments">
   <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="404.html" data-title="" data-url="https://zm-1006.github.io/404.html"></div>
+  <div id="ds-thread" class="ds-thread" data-thread-key="2017/03/10/原生js获取css样式/" data-title="原生js获取css样式" data-url="https://zm-1006.github.io/2017/03/10/原生js获取css样式/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
