@@ -3,9 +3,13 @@ title: 学习webpack原来就是SoEasy
 date: 2017-03-14 11:41:38
 tags:
     - webpack
+    - js
+    - 前端优化
 ---
-在前端大行其道的时代，不管是传统PC端应用，还是日益备受青睐的MobileAPP，功能越来越丰富，用户体验越来越好，必然导致业务逻辑越来越复杂，代码越来越多，客户端加载也是越来越慢。为了解决这些问题，便出现了如火如荼的`模块化`和一系列前端优化工具，webpack就是优化工具其中之一。
+在前端大行其道的时代，不管是传统PC端应用，还是日益备受青睐的MobileAPP，功能越来越丰富，用户体验越来越好，必然导致业务逻辑越来越复杂，代码越来越多，客户端加载也是越来越慢。为了解决这些问题，便出现了如火如荼的`模块化`和一系列前端优化工具，[webpack](https://webpack.js.org/)就是优化工具其中之一。
 <!-- more -->
+[![webpack]](https://webpack.js.org)
+[webpack]:http://ohecg7vrp.bkt.clouddn.com/webpack_logo.jpg "blog"
 `webpack`是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。本文就简单介绍webpack的基本使用和`config`配置。
 ***前提：***windows下`node`和`npm`环境已经配置OK，`cmd命令行`中`node -v`和`npm -v`都能正常显示版本。
 # 安装
@@ -250,6 +254,7 @@ webpack-dev-server是一个轻量级的服务器，修改文件源码后，自�
 *提示：*`i`是`install`的简写，推荐使用
 * 参考文档：
 0. http://webpack.github.io/docs/
+0. https://webpack.js.org/
 1. http://webpackdoc.com/
 2. http://www.cnblogs.com/haogj/p/5160821.html
 3. http://www.jb51.net/article/96646.htm
