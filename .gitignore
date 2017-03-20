@@ -1,4 +1,6 @@
 .DS_Store
 .porject
-.idea/
+.idea
 .node_modules/
+.git
+.deploy_git
