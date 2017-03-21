@@ -8,6 +8,7 @@
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
+          <hr style="border:none;border-bottom:1px solid #ddd"/>
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
@@ -23,18 +24,23 @@
       <% } %>
     </div>
     <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
+        <%- partial('post/tag') %>
+
+
+          <!-- jiathis分享 -->
+          <% if (!index){ %>
+          <%-partial('post/jiathis')%>
+          <% } %>
+
       <% if (post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
-      <%- partial('post/tag') %>
+
     </footer>
   </div>
   <% if (!index){ %>
     <%- partial('post/nav') %>
   <% } %>
-
-
 
   <!-- 增加打赏功能 -->
   <% if (!index && theme.donate){ %>
@@ -63,4 +69,7 @@
   </script>
   <!-- 多说公共JS代码 end -->
 </section>
+
+<div style="text-align: center"><span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv" style="color: red;"></span>次</span></div>
+
 <% } %>

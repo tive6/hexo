@@ -65,6 +65,9 @@ pagination_dir: page
 ## 添加多说评论
 duoshuo_shortname: zmnaer
 
+## 百度统计
+baidu_tongji: true
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
