@@ -7,7 +7,7 @@
   <!--定义网页的描述说明信息-->
   <meta name="description" content="zmnaer.com是一个基于hexo强力驱动，采用github云仓库，自定义域名自主搭建的个人博客，致力于与广大程序猿共同探讨代码的奥秘，分享编程的乐趣。" />
   <!--定义网页的关键字，供搜索引擎搜索-->
-  <meta name="keywords" content="zmnaer zmnaer.com hexo blog 博客 web 前端 HTML CSS H5 javascript JS nodejs node github coding" />
+  <meta name="keywords" content="zmnaer.com 松枫 hexo blog 博客 web 前端 HTML CSS H5 javascript JS nodejs node github coding" />
   <!--设置网页作者-->
   <meta name="author" content="zmnaer" />
   <!--设置网页版权-->
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://zm-1006.github.io/2017/02/24/mongoose常见错误（一）/index.html">
 <meta property="og:site_name" content="zmnaer">
 <meta property="og:description" content="mongoose是一个将js对象与数据库产生关系的一个框架，让传统的直接操作数据库变成操作对象，从而间接的操作数据库。">
-<meta property="og:updated_time" content="2017-03-25T07:50:23.588Z">
+<meta property="og:updated_time" content="2017-03-10T07:02:00.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongoose常见错误（一）">
 <meta name="twitter:description" content="mongoose是一个将js对象与数据库产生关系的一个框架，让传统的直接操作数据库变成操作对象，从而间接的操作数据库。">
@@ -97,29 +97,29 @@
 </header>
         <div class="outer">
             <section id="main"><article id="post-mongoose常见错误（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/24/mongoose常见错误（一）/" class="article-date">
+    <div class="article-meta">
+        <a href="/2017/02/24/mongoose常见错误（一）/" class="article-date">
   <time datetime="2017-02-24T03:30:49.000Z" itemprop="datePublished">2017-02-24</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
+    </div>
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       mongoose常见错误（一）
     </h1>
   
 
-          <hr style="border:none;border-bottom:1px solid #ddd"/>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>mongoose</code>是一个将js对象与数据库产生关系的一个<code>框架</code>，让传统的直接操作数据库变成<code>操作对象</code>，从而间接的操作数据库。</p>
+            <hr style="border:none;border-bottom:1px solid #ddd"/>
+        </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><code>mongoose</code>是一个将js对象与数据库产生关系的一个<code>框架</code>，让传统的直接操作数据库变成<code>操作对象</code>，从而间接的操作数据库。</p>
 <a id="more"></a>
 <ul>
 <li>mongoose操作流程：<code>创建类</code>——&gt;<code>实例化类</code>——&gt;<code>调用类方法</code>。<br>下面请看一个具体事例：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</div><div class="line"><span class="comment">// 连接数据库</span></div><div class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>);<span class="comment">// test ：是数据库名字 connections</span></div><div class="line"><span class="comment">// 创建了一个模型（相当于创建了一个“类”） ，People的模型。所有的People，都有名字，是字符串类型，</span></div><div class="line"><span class="keyword">var</span> People = mongoose.model(<span class="string">'People'</span>,&#123;<span class="attr">name</span>:<span class="built_in">String</span>&#125;);</div><div class="line"><span class="comment">// 实例化一个People</span></div><div class="line"><span class="keyword">var</span> zmnaer = <span class="keyword">new</span> People(&#123;<span class="attr">name</span>:<span class="string">'zmnaer'</span>&#125;);</div><div class="line"><span class="comment">// 调用这个People的save方法，保存这个人</span></div><div class="line">zmnaer.save(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'连接成功'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
@@ -133,17 +133,17 @@
 <li>参考博文：<a href="http://www.cnblogs.com/jay--zhang/p/5911667.html" target="_blank" rel="external">http://www.cnblogs.com/jay--zhang/p/5911667.html</a></li>
 </ul>
 
-      
-    </div>
-    <footer class="article-footer">
-        
+            
+        </div>
+        <footer class="article-footer">
+            
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongoose/">mongoose</a></li></ul>
 
 
 
-          <!-- jiathis分享 -->
-          
-          <!-- JiaThis Button BEGIN -->
+            <!-- jiathis分享 -->
+            
+            <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style" style="overflow: hidden;float: right">
     <a class="jiathis_button_qzone"></a>
     <a class="jiathis_button_weixin"></a>
@@ -167,13 +167,13 @@
 <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=2127864" charset="utf-8"></script>
 <!-- JiaThis Button END -->
 
-          
+            
 
-      
+            
 
-    </footer>
-  </div>
-  
+        </footer>
+    </div>
+    
     
 <nav id="article-nav">
   
@@ -194,57 +194,20 @@
   
 </nav>
 
-  
+    
 
-  <!-- 增加打赏功能 -->
-  
-  <! -- 添加捐赠图标 -->
-<div class ="post-donate">
-  <div id="donate_board" class="donate_bar center">
-    <a id="btn_donate" class="btn_donate" href="javascript:" title="打赏"></a>
-        <span class="donate_txt">
-           ↑<br>
-          欣赏此文？求鼓励，求支持！
-        </span>
-    <br>
-  </div>
-  <div id="donate_guide" class="donate_bar center hidden" >
-    <!-- 支付宝打赏图案 -->
-    <img src="http://ohecg7vrp.bkt.clouddn.com/zhifubao.png" alt="支付宝打赏" title="支付宝打赏">
-    <!-- 微信打赏图案 -->
-    <img src="http://ohecg7vrp.bkt.clouddn.com/weixin.png" alt="微信打赏" title="微信打赏">
-  </div>
-  <script type="text/javascript">
-    document.getElementById('btn_donate').onclick = function(){
-      $('#donate_board').addClass('hidden');
-      $('#donate_guide').removeClass('hidden');
-    }
-  </script>
-</div>
-<! -- 添加捐赠图标 -->
-  
-
+    <!-- 增加打赏功能 -->
 </article>
 
 
 
 <section id="comments">
-  <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="2017/02/24/mongoose常见错误（一）/" data-title="mongoose常见错误（一）" data-url="https://zm-1006.github.io/2017/02/24/mongoose常见错误（一）/"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"zmnaer"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-  <!-- 多说公共JS代码 end -->
+    <!-- 友言 start -->
+    <div id="ds-thread" class="ds-thread" data-thread-key="2017/02/24/mongoose常见错误（一）/" data-title="mongoose常见错误（一）" data-url="https://zm-1006.github.io/2017/02/24/mongoose常见错误（一）/"></div>
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2127864"></script>
+    <!-- UY END -->
 </section>
 
 <div style="text-align: center"><span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv" style="color: red;"></span>次</span></div>

@@ -1,73 +1,59 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-    <%- partial('post/category') %>
-  </div>
-  <div class="article-inner">
-    <%- partial('post/gallery') %>
-    <% if (post.link || post.title){ %>
-      <header class="article-header">
-        <%- partial('post/title', {class_name: 'article-title'}) %>
-          <hr style="border:none;border-bottom:1px solid #ddd"/>
-      </header>
-    <% } %>
-    <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-        <% if (theme.excerpt_link){ %>
-          <p class="article-more-link">
-            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
-          </p>
-        <% } %>
-      <% } else { %>
-        <%- post.content %>
-      <% } %>
+    <div class="article-meta">
+        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+        <%- partial('post/category') %>
     </div>
-    <footer class="article-footer">
-        <%- partial('post/tag') %>
+    <div class="article-inner">
+        <%- partial('post/gallery') %>
+        <% if (post.link || post.title){ %>
+        <header class="article-header">
+            <%- partial('post/title', {class_name: 'article-title'}) %>
+            <hr style="border:none;border-bottom:1px solid #ddd"/>
+        </header>
+        <% } %>
+        <div class="article-entry" itemprop="articleBody">
+            <% if (post.excerpt && index){ %>
+            <%- post.excerpt %>
+            <% if (theme.excerpt_link){ %>
+            <p class="article-more-link">
+                <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+            </p>
+            <% } %>
+            <% } else { %>
+            <%- post.content %>
+            <% } %>
+        </div>
+        <footer class="article-footer">
+            <%- partial('post/tag') %>
 
 
-          <!-- jiathis分享 -->
-          <% if (!index){ %>
-          <%-partial('post/jiathis')%>
-          <% } %>
+            <!-- jiathis分享 -->
+            <% if (!index){ %>
+            <%-partial('post/jiathis')%>
+            <% } %>
 
-      <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
-      <% } %>
+            <% if (post.comments && config.disqus_shortname){ %>
+            <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+            <% } %>
 
-    </footer>
-  </div>
-  <% if (!index){ %>
+        </footer>
+    </div>
+    <% if (!index){ %>
     <%- partial('post/nav') %>
-  <% } %>
+    <% } %>
 
-  <!-- 增加打赏功能 -->
-  <% if (!index && theme.donate){ %>
-  <%- partial('donate') %>
-  <% } %>
-
+    <!-- 增加打赏功能 -->
 </article>
 
-<% if (!index && post.comments && config.duoshuo_shortname){ %>
+<% if (!index && post.comments){ %>
 
 <section id="comments">
-  <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="<%= post.path %>" data-title="<%= post.title %>" data-url="<%= post.permalink %>"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"zmnaer"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-  <!-- 多说公共JS代码 end -->
+    <!-- 友言 start -->
+    <div id="ds-thread" class="ds-thread" data-thread-key="<%= post.path %>" data-title="<%= post.title %>" data-url="<%= post.permalink %>"></div>
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2127864"></script>
+    <!-- UY END -->
 </section>
 
 <div style="text-align: center"><span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv" style="color: red;"></span>次</span></div>

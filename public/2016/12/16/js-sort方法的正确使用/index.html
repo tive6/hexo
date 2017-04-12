@@ -7,7 +7,7 @@
   <!--定义网页的描述说明信息-->
   <meta name="description" content="zmnaer.com是一个基于hexo强力驱动，采用github云仓库，自定义域名自主搭建的个人博客，致力于与广大程序猿共同探讨代码的奥秘，分享编程的乐趣。" />
   <!--定义网页的关键字，供搜索引擎搜索-->
-  <meta name="keywords" content="zmnaer zmnaer.com hexo blog 博客 web 前端 HTML CSS H5 javascript JS nodejs node github coding" />
+  <meta name="keywords" content="zmnaer.com 松枫 hexo blog 博客 web 前端 HTML CSS H5 javascript JS nodejs node github coding" />
   <!--设置网页作者-->
   <meta name="author" content="zmnaer" />
   <!--设置网页版权-->
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://zm-1006.github.io/2016/12/16/js-sort方法的正确使用/index.html">
 <meta property="og:site_name" content="zmnaer">
 <meta property="og:description" content="JavaScript中的sort()方法用于对数组的元素进行排序。其中有许多误区一定要注意，不然就会带来意想不到的结果。">
-<meta property="og:updated_time" content="2017-03-25T07:50:23.588Z">
+<meta property="og:updated_time" content="2017-02-21T01:54:44.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js-sort方法的正确使用">
 <meta name="twitter:description" content="JavaScript中的sort()方法用于对数组的元素进行排序。其中有许多误区一定要注意，不然就会带来意想不到的结果。">
@@ -97,29 +97,29 @@
 </header>
         <div class="outer">
             <section id="main"><article id="post-js-sort方法的正确使用" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/16/js-sort方法的正确使用/" class="article-date">
+    <div class="article-meta">
+        <a href="/2016/12/16/js-sort方法的正确使用/" class="article-date">
   <time datetime="2016-12-16T05:30:26.000Z" itemprop="datePublished">2016-12-16</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
+    </div>
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       js-sort方法的正确使用
     </h1>
   
 
-          <hr style="border:none;border-bottom:1px solid #ddd"/>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>JavaScript中的sort()方法用于对数组的元素进行排序。其中有许多误区一定要注意，不然就会带来意想不到的结果。<br><a id="more"></a><br>下面就举几个具体事例来说明：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 想要的正常结果:</span></div><div class="line">[<span class="string">'Xiaomi'</span>, <span class="string">'Apple'</span>, <span class="string">'Oppo'</span>].sort(); <span class="comment">// ['Apple', 'Oppo', 'Xiaomi'];</span></div><div class="line"></div><div class="line"><span class="comment">// 诡异的结果:</span></div><div class="line">[<span class="string">'Xiaomi'</span>, <span class="string">'apple'</span>, <span class="string">'Oppo'</span>].sort(); <span class="comment">// ['Oppo', 'Xiaomi", 'apple']</span></div><div class="line"></div><div class="line"><span class="comment">// 无法理解的结果:</span></div><div class="line">[<span class="number">10</span>, <span class="number">22</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">2</span>].sort(); <span class="comment">// [1, 10, 2, 22, 8]</span></div></pre></td></tr></table></figure></p>
+            <hr style="border:none;border-bottom:1px solid #ddd"/>
+        </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p>JavaScript中的sort()方法用于对数组的元素进行排序。其中有许多误区一定要注意，不然就会带来意想不到的结果。<br><a id="more"></a><br>下面就举几个具体事例来说明：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 想要的正常结果:</span></div><div class="line">[<span class="string">'Xiaomi'</span>, <span class="string">'Apple'</span>, <span class="string">'Oppo'</span>].sort(); <span class="comment">// ['Apple', 'Oppo', 'Xiaomi'];</span></div><div class="line"></div><div class="line"><span class="comment">// 诡异的结果:</span></div><div class="line">[<span class="string">'Xiaomi'</span>, <span class="string">'apple'</span>, <span class="string">'Oppo'</span>].sort(); <span class="comment">// ['Oppo', 'Xiaomi", 'apple']</span></div><div class="line"></div><div class="line"><span class="comment">// 无法理解的结果:</span></div><div class="line">[<span class="number">10</span>, <span class="number">22</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">2</span>].sort(); <span class="comment">// [1, 10, 2, 22, 8]</span></div></pre></td></tr></table></figure></p>
 <p>造成第二第结果的原因是，因为sort()方法是根据<code>字符串</code>的<code>ASCII码</code>进行排序，所谓的ASCII码也就是我们常说的<code>unicode</code>编码。<br>而<code>同一个</code>英文字母，<code>大写</code>与<code>小写</code>是有区别的，小写字母的ASCII码是排在大写字母的后边，所以得到这种结果也就见怪不怪了。</p>
 <ul>
 <li>解决方法其实也很简单：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'Xiaomi'</span>, <span class="string">'apple'</span>, <span class="string">'Oppo'</span>];</div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span> (<span class="params">s1, s2</span>) </span>&#123;</div><div class="line">    x1 = s1.toUpperCase();</div><div class="line">    x2 = s2.toUpperCase();</div><div class="line">    <span class="keyword">if</span> (x1 &lt; x2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (x1 &gt; x2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;); <span class="comment">// ['apple', 'Oppo', 'Xiaomi']</span></div></pre></td></tr></table></figure>
@@ -143,17 +143,17 @@
 </blockquote>
 </blockquote>
 
-      
-    </div>
-    <footer class="article-footer">
-        
+            
+        </div>
+        <footer class="article-footer">
+            
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
 
 
-          <!-- jiathis分享 -->
-          
-          <!-- JiaThis Button BEGIN -->
+            <!-- jiathis分享 -->
+            
+            <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style" style="overflow: hidden;float: right">
     <a class="jiathis_button_qzone"></a>
     <a class="jiathis_button_weixin"></a>
@@ -177,13 +177,13 @@
 <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=2127864" charset="utf-8"></script>
 <!-- JiaThis Button END -->
 
-          
+            
 
-      
+            
 
-    </footer>
-  </div>
-  
+        </footer>
+    </div>
+    
     
 <nav id="article-nav">
   
@@ -204,57 +204,20 @@
   
 </nav>
 
-  
+    
 
-  <!-- 增加打赏功能 -->
-  
-  <! -- 添加捐赠图标 -->
-<div class ="post-donate">
-  <div id="donate_board" class="donate_bar center">
-    <a id="btn_donate" class="btn_donate" href="javascript:" title="打赏"></a>
-        <span class="donate_txt">
-           ↑<br>
-          欣赏此文？求鼓励，求支持！
-        </span>
-    <br>
-  </div>
-  <div id="donate_guide" class="donate_bar center hidden" >
-    <!-- 支付宝打赏图案 -->
-    <img src="http://ohecg7vrp.bkt.clouddn.com/zhifubao.png" alt="支付宝打赏" title="支付宝打赏">
-    <!-- 微信打赏图案 -->
-    <img src="http://ohecg7vrp.bkt.clouddn.com/weixin.png" alt="微信打赏" title="微信打赏">
-  </div>
-  <script type="text/javascript">
-    document.getElementById('btn_donate').onclick = function(){
-      $('#donate_board').addClass('hidden');
-      $('#donate_guide').removeClass('hidden');
-    }
-  </script>
-</div>
-<! -- 添加捐赠图标 -->
-  
-
+    <!-- 增加打赏功能 -->
 </article>
 
 
 
 <section id="comments">
-  <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/16/js-sort方法的正确使用/" data-title="js-sort方法的正确使用" data-url="https://zm-1006.github.io/2016/12/16/js-sort方法的正确使用/"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"zmnaer"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-  <!-- 多说公共JS代码 end -->
+    <!-- 友言 start -->
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/16/js-sort方法的正确使用/" data-title="js-sort方法的正确使用" data-url="https://zm-1006.github.io/2016/12/16/js-sort方法的正确使用/"></div>
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2127864"></script>
+    <!-- UY END -->
 </section>
 
 <div style="text-align: center"><span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv" style="color: red;"></span>次</span></div>
