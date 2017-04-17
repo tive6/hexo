@@ -1172,7 +1172,12 @@ a.article-title:hover {
 }
 #footer-info {
   line-height: 1.6em;
+  text-align: center;
   font-size: 0.85em;
+}
+#footer-info .pv span {
+  color: #00b1fb;
+  padding: 0 5px;
 }
 .article-entry pre,
 .article-entry .highlight {

@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <!--百度抓取验证-->
-  <meta name="baidu-site-verification" content="9VUSURlchs" />
-  <!--定义网页的描述说明信息-->
-  <meta name="description" content="zmnaer.com是一个基于hexo强力驱动，采用github云仓库，自定义域名自主搭建的个人博客，致力于与广大程序猿共同探讨代码的奥秘，分享编程的乐趣。" />
-  <!--定义网页的关键字，供搜索引擎搜索-->
-  <meta name="keywords" content="zmnaer.com 松枫 hexo blog 博客 web 前端 HTML CSS H5 javascript JS nodejs node github coding" />
-  <!--设置网页作者-->
-  <meta name="author" content="zmnaer" />
-  <!--设置网页版权-->
-  <meta name="copyright" content="zmnaer" />
-  <!--设置创建时间-->
-  <meta name="date" content="2016年10月" />
-  
-  <title>babel入门一篇搞定 | zmnaer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端技术在日新月异的变化着，JavaScript以其独特的优势，在编程上广泛被关注，被使用。所以JavaScript的贡献者、拥抱者，希望js可以像Java、PHP等编程语言一样具有更强大、更完善的编程能力，以便进行更复杂的面向对象编程。为了面向对象统一化，加强化，js经历了ES5，正逐渐转向ES6、ES7的发展。ES6在语法格式以及使用上，与之前的规范相比有了很大的变化。">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="baidu-site-verification" content="9VUSURlchs" />
+    <meta name="description" content="zmnaer.com是一个基于hexo强力驱动，采用github云仓库，自定义域名自主搭建的个人博客，致力于与广大程序猿共同探讨代码的奥秘，分享编程的乐趣。" />
+    <meta name="keywords" content="zmnaer 松枫 hexo blog 博客 web 前端" />
+    <meta name="author" content="zmnaer" />
+    <meta name="copyright" content="zmnaer" />
+    <meta name="date" content="2016年10月" />
+    
+    <title>babel入门一篇搞定 | zmnaer</title>
+    <meta name="description" content="前端技术在日新月异的变化着，JavaScript以其独特的优势，在编程上广泛被关注，被使用。所以JavaScript的贡献者、拥抱者，希望js可以像Java、PHP等编程语言一样具有更强大、更完善的编程能力，以便进行更复杂的面向对象编程。为了面向对象统一化，加强化，js经历了ES5，正逐渐转向ES6、ES7的发展。ES6在语法格式以及使用上，与之前的规范相比有了很大的变化。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="babel入门一篇搞定">
 <meta property="og:url" content="https://zm-1006.github.io/2017/03/20/babel入门一篇搞定/index.html">
@@ -27,20 +23,18 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="babel入门一篇搞定">
 <meta name="twitter:description" content="前端技术在日新月异的变化着，JavaScript以其独特的优势，在编程上广泛被关注，被使用。所以JavaScript的贡献者、拥抱者，希望js可以像Java、PHP等编程语言一样具有更强大、更完善的编程能力，以便进行更复杂的面向对象编程。为了面向对象统一化，加强化，js经历了ES5，正逐渐转向ES6、ES7的发展。ES6在语法格式以及使用上，与之前的规范相比有了很大的变化。">
-  
+    
     <link rel="alternate" href="/atom.xml" title="zmnaer" type="application/atom+xml">
-  
-  
+    
+    
     <link rel="icon" href="http://ohecg7vrp.bkt.clouddn.com/favicon.ico">
-  
-  
+    
+    
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
 
-
-    <!--百度统计-->
     
 <script>
     /*#你的百度统计代码*/
@@ -52,7 +46,6 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
-
 
 </head>
 
@@ -189,7 +182,6 @@
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/babel/">babel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
 
-
             <!-- jiathis分享 -->
             
             <!-- JiaThis Button BEGIN -->
@@ -250,7 +242,7 @@
     <!-- UY END -->
 </section>
 
-<div style="text-align: center"><span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv" style="color: red;"></span>次</span></div>
+<!--<div style="text-align: center"><span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv" style="color: red;"></span>次</span></div>-->
 
 </section>
             
@@ -347,13 +339,19 @@
     <!-- 引入不蒜子插件 -->
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <!--<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>-->
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017——zmnaer<br>
-      由 <a href="http://hexo.io/" target="_blank"> Hexo </a> 强力驱动
+    
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            <p>
+                <span class="pv" id="busuanzi_container_site_uv">您是第<span id="busuanzi_value_site_uv"></span>位访客</span>— ♀ —
+                <span class="pv" id="busuanzi_container_site_pv">总访问量共<span id="busuanzi_value_site_pv"></span>次</span>
+            </p>
+            <p>
+                &copy; 2017— ♀ —<a href="http://zmnaer.com">zmnaer</a>
+                由 <a href="http://hexo.io/" target="_blank"> Hexo </a> 强力驱动
+            </p>
+        </div>
     </div>
-  </div>
 </footer>
     </div>
     <nav id="mobile-nav">

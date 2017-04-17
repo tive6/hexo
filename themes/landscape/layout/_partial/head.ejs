@@ -1,52 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <!--百度抓取验证-->
-  <meta name="baidu-site-verification" content="9VUSURlchs" />
-  <!--定义网页的描述说明信息-->
-  <meta name="description" content="zmnaer.com是一个基于hexo强力驱动，采用github云仓库，自定义域名自主搭建的个人博客，致力于与广大程序猿共同探讨代码的奥秘，分享编程的乐趣。" />
-  <!--定义网页的关键字，供搜索引擎搜索-->
-  <meta name="keywords" content="zmnaer.com 松枫 hexo blog 博客 web 前端 HTML CSS H5 javascript JS nodejs node github coding" />
-  <!--设置网页作者-->
-  <meta name="author" content="zmnaer" />
-  <!--设置网页版权-->
-  <meta name="copyright" content="zmnaer" />
-  <!--设置创建时间-->
-  <meta name="date" content="2016年10月" />
-  <%
-  var title = page.title;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="baidu-site-verification" content="9VUSURlchs" />
+    <meta name="description" content="zmnaer.com是一个基于hexo强力驱动，采用github云仓库，自定义域名自主搭建的个人博客，致力于与广大程序猿共同探讨代码的奥秘，分享编程的乐趣。" />
+    <meta name="keywords" content="zmnaer 松枫 hexo blog 博客 web 前端" />
+    <meta name="author" content="zmnaer" />
+    <meta name="copyright" content="zmnaer" />
+    <meta name="date" content="2016年10月" />
+    <%
+    var title = page.title;
+    if (is_archive()){
+        title = __('archive_a');
 
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
+        if (is_month()){
+            title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()){
+            title += ': ' + page.year;
+        }
+    } else if (is_category()){
+        title = __('category') + ': ' + page.category;
+    } else if (is_tag()){
+        title = __('tag') + ': ' + page.tag;
     }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
+    %>
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+    <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+    <% if (theme.rss){ %>
     <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
-  <% if (theme.favicon){ %>
+    <% } %>
+    <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (config.highlight.enable){ %>
+    <% } %>
+    <% if (config.highlight.enable){ %>
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
-  <%- partial('google-analytics') %>
-
-    <!--百度统计-->
+    <% } %>
+    <%- css('css/style') %>
+    <%- partial('google-analytics') %>
     <%- partial('baidu_tongji') %>
-
 </head>
