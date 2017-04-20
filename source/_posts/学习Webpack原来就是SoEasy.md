@@ -20,11 +20,11 @@ tags:
 ```
 * 项目跟目录下创建`package.json`文件
 ```javascript
-    npm init
+    npm init    //执行命令后一路enter键就OK
 ```
 * 项目`根目录`下安装webpack包依赖
 ```bash
-    npm i webpack --save-dev    //执行命令后一路enter键就OK
+    npm i webpack --save-dev
 ```
 * 示例目录结构：
 

@@ -14,7 +14,7 @@ timezone: Asia/Shanghai #时区
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # url: https://zm-1006.github.io
-url: https://zm-1006.github.io
+url: http://zmnaer.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
