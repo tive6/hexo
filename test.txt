@@ -1,4 +1,0 @@
-说明：这是blog的源目录（备份）
-hexo 博客源目录
-push：zm-1006/hexo.git
-本地：Git/zm-hexo-master/hexo/

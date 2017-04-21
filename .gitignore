@@ -1,9 +1,0 @@
-.DS_Store
-.porject
-.idea
-.node_modules/
-.git
-.deploy_git
-/node_modules/
-/public/
-/public/README.md
