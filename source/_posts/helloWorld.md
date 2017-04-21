@@ -9,6 +9,9 @@ tags:
 一个程序猿的`超神之路`，往往都是从编写`Hello Word`开始的。
 Hello World ，中文意思：你好，世界。世界上的第一个程序就是Hello World，由`Brian Kernighan`创作。
 <!--more-->
+
+![Hello Word](http://upload-images.jianshu.io/upload_images/3876828-985369d16268674d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 对于程序猿来说，Hello Word显得很熟悉，很亲切。它的出现意味着你即将踏入漫长而有趣的程序之旅，这一路上你并不孤单，`BUG`会一直常伴你左右，或喜或悲，都是一种成长。
 下面就让我们一起来领略各种不同编程语言的`HelloWord`吧。
 * Java

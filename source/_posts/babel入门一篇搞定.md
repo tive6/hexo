@@ -9,8 +9,12 @@ tags:
 前端技术在日新月异的变化着，`JavaScript`以其独特的优势，在编程上广泛被关注，被使用。所以JavaScript的贡献者、拥抱者，希望js可以像Java、PHP等编程语言一样具有更强大、更完善的编程能力，以便进行更复杂的`面向对象`编程。
 为了面向对象统一化，加强化，js经历了`ES5`，正逐渐转向`ES6`、`ES7`的发展。ES6在语法格式以及使用上，与之前的规范相比有了很大的变化。
 <!-- more -->
+
+![babel](http://upload-images.jianshu.io/upload_images/3876828-32d02804c084a44c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 更新换代，版本升级固然是好事，但问题也是接踵而至。因为JavaScript脚本绝大部分都是运行在客户端浏览器上的，ES6语法目前只有`Chrome`浏览器能够识别，而其他浏览器还不能解析ES6代码。
 所以编写好的ES6语法代码，需要通过编译，转换成所有浏览器都能识别解析的ES5代码，所以就有了今天的`babel`。
+
 [babel](http://babeljs.io)是优秀的`npm包`，具有编译转换ES6语法为ES5语法的强大功能，并提供了众多接口插件，来解决编译转换问题。
 <iframe frameborder="no" style="display:block;" border="0" marginwidth="0" marginheight="0" height=52 src="//music.163.com/outchain/player?type=2&id=133998&auto=1&height=32"></iframe>
 
